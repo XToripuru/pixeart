@@ -1,0 +1,30 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+shared = { path = "../shared" }
+bincode = "*"
+serde = { version = "*", features = ["derive", "rc"] }
+serde_json = "*"
+chrono = { version = "*", features = ["clock"] }
+tokio = { version = "1", features = ["full"] }
+lettre = { version = "*", features = ["tokio1", "tokio1-native-tls", "builder"] }
+actix-web = { version = "*", features = ["rustls"] }
+actix-ws = "*"
+actix-files = "*"
+sha2 = "*"
+memmap2 = "*"
+sysinfo = "*"
+rand = { version = "*", features = ["alloc"] }
+rustls = "0.20.8"
+rustls-pemfile = "*"
+futures = "*"
+futures-util = "*"
+async-stripe = {version = "*", features = ["async", "runtime-tokio-hyper-rustls"] }
+surrealdb = "1.0.0-beta.9+20230402"
+actix-extensible-rate-limit = "*"
+log = "*"

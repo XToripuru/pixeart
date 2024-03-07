@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+  <script src="/script/recovery.js"></script>
+  <title>PixeArt</title>
+  <link rel="stylesheet" type="text/css" href="/style/recovery.css" />
+</head>
+
+<body>
+  <div id="login-page" class="login-root">
+    <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+      <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+        <div class="box-root flex-flex flex-justifyContent--center">
+          <img src="/logo.png" width="25%" alt="PixeArt">
+        </div>
+        <div class="formbg-outer">
+          <div class="formbg">
+            <div class="formbg-inner padding-horizontal--48">
+              <span class="center padding-bottom--15">Password recovery</span>
+              <div id="stripe-login">
+                <div id="recovery-page-error-parent" class="disabled center padding-bottom--15">
+                  <label id="recovery-page-error" class="error"></label>
+                </div>
+                <div class="field padding-bottom--24">
+                  <label class="padding-bottom--10" for="password">New password</label>
+                  <input id="recovery-page-password" type="password" name="password">
+                </div>
+                <div class="field padding-bottom--24">
+                  <input id="recovery-page-submit" type="submit" name="submit" value="Update">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-link padding-top--24">
+            <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
+              <span><a href="#">PixeArt</a></span>
+              <span><a href="/contact">Contact</a></span>
+              <span><a href="/pp">Privacy Policy</a></span>
+              <span><a href="/tos">Terms of Service</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

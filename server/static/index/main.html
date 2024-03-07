@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<head>
+  <script src="/script/main.js"></script>
+  <title>PixeArt</title>
+  <link rel="stylesheet" type="text/css" href="/style/main.css" />
+</head>
+
+<body>
+  <div id="nav" class="nav disabled">
+    <div class="nav__content">
+
+      <div id="login-page" class="nav__list-item login-root">
+        <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+          <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+            <div class="nav__list-item box-root flex-flex flex-justifyContent--center">
+              <img src="logo.png" width="25%" alt="PixeArt">
+            </div>
+            <div class="formbg-outer">
+              <div class="formbg">
+                <div class="formbg-inner padding-horizontal--48">
+                  <span class="center padding-bottom--15">Sign in to your account</span>
+                  <div id="stripe-login">
+                    <div id="login-page-error-parent" class="disabled center padding-bottom--15">
+                      <label id="login-page-error" class="error"></label>
+                    </div>
+                    <div class="nav__list-item field padding-bottom--24">
+                      <label for="login">Login or Email</label>
+                      <input id="login-page-login" type="login" name="login">
+                    </div>
+                    <div class="nav__list-item field padding-bottom--24">
+                      <div class="grid--50-50">
+                        <label for="password">Password</label>
+                      </div>
+                      <input id="login-page-password" type="password" name="password">
+                      <div class="grid--50-50">
+                        <div></div>
+                        <div class="reset-pass">
+                          <a href="#" id="login-page-forgot">Forgot your password?</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="nav__list-item field padding-bottom--24">
+                      <input id="login-page-submit" type="button" name="submit" value="Sign in">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="nav__list-item footer-link padding-top--24">
+                <span>Don't have an account? <a href="#" id="login-page-sign-up">Sign up</a></span>
+                <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
+                  <span><a href="#">PixeArt</a></span>
+                  <span><a href="/contact">Contact</a></span>
+                  <span><a href="/pp">Privacy Policy</a></span>
+                  <span><a href="/tos">Terms of Service</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="register-page" class="disabled nav__list-item login-root">
+        <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+          <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+            <div class="nav__list-item box-root flex-flex flex-justifyContent--center">
+              <img src="logo.png" width="25%" alt="PixeArt">
+            </div>
+            <div class="formbg-outer">
+              <div class="formbg">
+                <div class="formbg-inner padding-horizontal--48">
+                  <span class="center padding-bottom--15">Create new account</span>
+                  <div id="stripe-login">
+                    <div id="register-page-error-parent" class="disabled center padding-bottom--15">
+                      <label id="register-page-error" class="error"></label>
+                    </div>
+                    <div class="nav__list-item field padding-bottom--24">
+                      <label for="login">Login</label>
+                      <input id="register-page-login" type="login" name="login">
+                    </div>
+                    <div class="nav__list-item field padding-bottom--24">
+                      <label for="password">Password</label>
+                      <input id="register-page-password" type="password" name="password">
+                    </div>
+                    <div class="nav__list-item field padding-bottom--24">
+                      <label for="email">Email</label>
+                      <input id="register-page-email" type="email" name="email">
+                    </div>
+                    <div class="nav__list-item field field-checkbox padding-bottom--24 flex-flex align-center">
+                      <label for="checkbox">
+                        <input id="register-page-checkbox" type="checkbox" name="checkbox" />
+                        I agree to the <a href="/tos">terms</a> and <a href="/pp">privacy policy</a>.
+                      </label>
+                    </div>
+                    <div class="nav__list-item field padding-bottom--24">
+                      <input id="register-page-submit" type="button" name="submit" value="Sign up">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="nav__list-item footer-link padding-top--24">
+                <span>Already have an account? <a href="#" id="register-page-sign-in">Sign in</a></span>
+                <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
+                  <span><a href="#">PixeArt</a></span>
+                  <span><a href="/contact">Contact</a></span>
+                  <span><a href="/pp">Privacy Policy</a></span>
+                  <span><a href="/tos">Terms of Service</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="lostpass-page" class="disabled nav__list-item login-root">
+        <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+          <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+            <div class="nav__list-item box-root flex-flex flex-justifyContent--center">
+              <img src="logo.png" width="25%" alt="PixeArt">
+            </div>
+            <div class="formbg-outer">
+              <div class="formbg">
+                <div class="formbg-inner padding-horizontal--48">
+                  <span class="center padding-bottom--15">Password recovery</span>
+                  <div id="stripe-login">
+                    <div id="lostpass-page-error-parent" class="disabled center padding-bottom--15">
+                      <label id="lostpass-page-error" class="error"></label>
+                    </div>
+                    <div class="nav__list-item field padding-bottom--15">
+                      <label for="email">Email</label>
+                      <input id="lostpass-page-email" type="email" name="email">
+                    </div>
+                    <div class="nav__list-item field field-checkbox padding-bottom--15 flex-flex align-center">
+                      <label>
+                        A link to change your password will be sent
+                      </label>
+                    </div>
+                    <div class="nav__list-item field padding-bottom--24">
+                      <input id="lostpass-page-submit" type="button" name="submit" value="Send">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="nav__list-item footer-link padding-top--24">
+                <span>Remember your password? <a href="#" id="lostpass-page-sign-in">Sign in</a></span>
+                <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
+                  <span><a href="#">PixeArt</a></span>
+                  <span><a href="/contact">Contact</a></span>
+                  <span><a href="/pp">Privacy Policy</a></span>
+                  <span><a href="/tos">Terms of Service</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="verify-page" class="disabled nav__list-item login-root">
+        <div class="verify-page">
+          <h1 id="verify-page-text"></h1>
+        </div>
+      </div>
+
+      <div id="account-page" class="disabled nav__list-item login-root">
+
+        <div class="account-page">
+
+          <div class="welcome">
+            <h1 id="welcome">Welcome</h1>
+          </div>
+
+          <div class="vertical-separator"></div>
+          
+          <div class="cards">
+
+            <div id="tier-0" class="col-sm-4 nav__list-item">
+              <div class="card text-center">
+                <div class="title">
+                  <h2>Free</h2>
+                </div>
+                <div class="price">
+                  <h4 id="tier-0-price">&mdash;</h4>
+                </div>
+                <div class="option">
+                  <ul>
+                  <li>1 pixel every 3 minutes</li>
+                  </ul>
+                </div>
+                <a href="#" id="tier-0-button">Current</a>
+              </div>
+            </div>
+            
+            <div id="tier-1" class="col-sm-4 nav__list-item">
+              <div class="card text-center">
+                <div class="title">
+                  <h2>Tier I</h2>
+                </div>
+                <div class="price">
+                  <h4 id="tier-1-price">$2</h4>
+                </div>
+                <div class="option">
+                  <ul>
+                  <li>1 pixel every 60 seconds</li>
+                  </ul>
+                </div>
+                <a href="#" id="tier-1-button">Buy</a>
+              </div>
+            </div>
+
+            <div id="tier-2" class="col-sm-4 nav__list-item">
+              <div class="card text-center">
+                <div class="title">
+                  <h2>Tier II</h2>
+                </div>
+                <div class="price">
+                  <h4 id="tier-2-price">$4</h4>
+                </div>
+                <div class="option">
+                  <ul>
+                  <li>1 pixel every 30 seconds</li>
+                  </ul>
+                </div>
+                <a href="#"id="tier-2-button">Buy</a>
+              </div>
+            </div>
+
+            <div id="tier-3" class="col-sm-4 nav__list-item">
+              <div class="card text-center">
+                <div class="title">
+                  <h2>Tier III</h2>
+                </div>
+                <div class="price">
+                  <h4 id="tier-3-price">$8</h4>
+                </div>
+                <div class="option">
+                  <ul>
+                  <li>1 pixel every 15 seconds</li>
+                  </ul>
+                </div>
+                <a href="#" id="tier-3-button">Buy</a>
+              </div>
+            </div>
+
+            <div id="tier-4" class="col-sm-4 nav__list-item">
+              <div class="card text-center">
+                <div class="title">
+                  <h2>Tier IV</h2>
+                </div>
+                <div class="price">
+                  <h4 id="tier-4-price">$20</h4>
+                </div>
+                <div class="option">
+                  <ul>
+                  <li>1 pixel every 5 seconds</li>
+                  </ul>
+                </div>
+                <a href="#" id="tier-4-button">Buy</a>
+              </div>
+            </div>
+
+            <div id="tier-5" class="col-sm-4 nav__list-item">
+              <div class="card text-center">
+                <div class="title">
+                  <h2>Tier V</h2>
+                </div>
+                <div class="price">
+                  <h4 id="tier-5-price">$60</h4>
+                </div>
+                <div class="option">
+                  <ul>
+                  <li>1 pixel every 1 second</li>
+                  </ul>
+                </div>
+                <a href="#" id="tier-5-button">Buy</a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="vertical-separator"></div>
+
+          <div class="row">
+            <div class="column">
+              <p>Color Picker</p>
+              <p>Place</p>
+              <p>Move</p>
+            </div>
+            <div class="column">
+              <p>Shift</p>
+              <p>Left-Click</p>
+              <p>Right-Click & Hold</p>
+            </div>
+          </div>
+
+          <div class="field padding-bottom--24 down">
+            <input id="log-out" type="button" name="submit" value="Log Out">
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="site-content" class="site-content disabled">
+    <div class="main">
+      <canvas class="canvas" id="canvas" width="0" height="0"></canvas>
+      <canvas class="overlay disabled" id="overlay" width="0" height="0"></canvas>
+      <div class="background"></div>
+      <div id="meta" class="meta disabled">
+        <div id="timer-box" class="timer-box"></div>
+      </div>
+      <p id="timer" class="timer disabled"></p>
+      <p id="position" class="position disabled"></p>
+      <div class="menu-icon-hitbox"></div>
+      <div class="menu-icon blend">
+        <span class="menu-icon__line menu-icon__line-left"></span>
+        <span class="menu-icon__line"></span>
+        <span class="menu-icon__line menu-icon__line-right"></span>
+      </div>
+    </div>
+  </div>
+
+  <div id="connecting-page" class="connecting-page">
+    <div class="lds-dual-ring"></div>
+  </div>
+</body>
