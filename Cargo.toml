@@ -3,5 +3,4 @@ members = [
     "server",
     "shared",
     "client",
-    "sandbox"
 ]
